@@ -1,15 +1,24 @@
 <div class="hero-status-container">
-  <div *ngIf="lastHeroDeleted; else noHeroes">
+  <!-- <div *ngIf="lastHeroDeleted; else noHeroes">
     <h3>Last hero deleted: {{ lastHeroDeleted }}</h3>
   </div>
   <ng-template #noHeroes>
     <h3>No hero has been deleted</h3>
-  </ng-template>
+  </ng-template> -->
+
+  @if (lastHeroDeleted) {
+    <h3>Last hero deleted: {{ lastHeroDeleted }}</h3>
+  } @else {
+    <h3>No hero has been deleted</h3>
+  }
 
   <ul>
-    <li *ngFor="let name of heroesName">
+    <!-- <li *ngFor="let name of heroesName">
       {{ name }}
-    </li>
+    </li> -->
+    @for (name of heroesName; track name) {
+      <li>{{ name }}</li>
+    }
   </ul>
 
   <button *ngIf="heroesName.length > 0" (click)="removeLastHero()">
