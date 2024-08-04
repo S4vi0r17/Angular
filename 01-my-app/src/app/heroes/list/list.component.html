@@ -1,1 +1,18 @@
-<p>list works!</p>
+<div class="hero-status-container">
+  <div *ngIf="lastHeroDeleted; else noHeroes">
+    <h3>Last hero deleted: {{ lastHeroDeleted }}</h3>
+  </div>
+  <ng-template #noHeroes>
+    <h3>No hero has been deleted</h3>
+  </ng-template>
+
+  <ul>
+    <li *ngFor="let name of heroesName">
+      {{ name }}
+    </li>
+  </ul>
+
+  <button *ngIf="heroesName.length > 0" (click)="removeLastHero()">
+    Delete last hero
+  </button>
+</div>
