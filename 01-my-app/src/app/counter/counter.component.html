@@ -1,0 +1,17 @@
+<div class="counter-container">
+  <h1>{{ title }}</h1>
+  <hr />
+  <h3>
+    Counter: <span class="counter-value">{{ counter }}</span>
+  </h3>
+
+  <div class="button-group">
+    <button class="counter-button decrement" (click)="decrement()">
+      Decrement
+    </button>
+    <button class="counter-button reset" (click)="reset()">Reset</button>
+    <button class="counter-button increment" (click)="increment()">
+      Increment
+    </button>
+  </div>
+</div>
