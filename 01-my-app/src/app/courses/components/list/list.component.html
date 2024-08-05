@@ -12,7 +12,14 @@
   >
     <span class="course-name">{{ idx + 1 }}</span>
     <span class="course-name">{{ course.name }}</span>
-    <span class="course-grade">{{ course.grade }}</span>
+    <span
+      class="course-grade"
+      [ngClass]="{
+        'course-grade-fail': course.grade < 50,
+        'course-grade-pass': course.grade >= 50
+      }"
+      >{{ course.grade }}</span
+    >
     <div class="buttons">
       <button class="edit-button">Edit</button>
       <button class="delete-button">Delete</button>
