@@ -15,4 +15,9 @@ export class MainPageComponent {
         { name: 'Web Development', grade: 75 },
         { name: 'Mobile Development', grade: 70 }
     ];
+
+    onNewCourse(course: Course): void {
+        console.log('New course', course);
+        this.courses.push(course);
+    }
 }

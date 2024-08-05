@@ -1,4 +1,4 @@
 export interface Course {
     name: string;
-    grade: number;
+    grade: number | null;
 }
