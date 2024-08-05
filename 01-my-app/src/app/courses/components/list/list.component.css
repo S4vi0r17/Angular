@@ -51,13 +51,13 @@ button:hover {
 }
 
 .edit-button:hover {
-  background-color: #028d8d;
+  background-color: #00adad;
 }
 
 .delete-button {
-  background-color: #c80125;
+  background-color: #dc0028;
 }
 
 .delete-button:hover {
-  background-color: #980000;
+  background-color: #a90000;
 }
