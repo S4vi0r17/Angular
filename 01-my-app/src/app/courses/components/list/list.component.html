@@ -1,7 +1,18 @@
 <ul class="course-list">
-  <li>
-    <span class="course-name">name</span>
-    <span class="course-grade">grade</span>
+  <li
+    *ngFor="
+      let course of coursesList;
+      let i = index;
+      index as idx;
+      let isFirst = first;
+      let isLast = last;
+      let isEven = even;
+      let isOdd = odd
+    "
+  >
+    <span class="course-name">{{ idx + 1 }}</span>
+    <span class="course-name">{{ course.name }}</span>
+    <span class="course-grade">{{ course.grade }}</span>
     <div class="buttons">
       <button class="edit-button">Edit</button>
       <button class="delete-button">Delete</button>
