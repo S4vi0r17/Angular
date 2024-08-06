@@ -37,7 +37,7 @@ export class CourseService {
     }
   ];
 
-  onNewCourse(course: Course): void {
+  addCourse(course: Course): void {
     const newCourse = {
       ...course,
       id: uuid()
@@ -45,8 +45,7 @@ export class CourseService {
     this.courses.push(newCourse);
   }
 
-  onDeleteCourse(id: string): void {
+  deleteCourse(id: string): void {
     this.courses = this.courses.filter(course => course.id !== id)
   }
-
 }

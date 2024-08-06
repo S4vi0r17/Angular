@@ -10,6 +10,18 @@ import { CourseService } from '../services/course.service';
 
 export class MainPageComponent {
     constructor(
-        public courseService: CourseService
+        private courseService: CourseService
     ) { }
+
+    get courses(): Course[] {
+        return [...this.courseService.courses]
+    }
+
+    onDeleteCourse(id: string): void {
+        this.courseService.deleteCourse(id)
+    }
+
+    onNewCourse(course: Course): void {
+        this.courseService.addCourse(course)
+    }
 }
