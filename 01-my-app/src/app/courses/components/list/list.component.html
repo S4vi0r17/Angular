@@ -24,7 +24,9 @@
     </div>
     <div class="buttons">
       <button class="edit-button">Edit</button>
-      <button class="delete-button">Delete</button>
+      <button class="delete-button" (click)="onDeleteCourse(course.id!)">
+        Delete
+      </button>
     </div>
   </li>
 </ul>

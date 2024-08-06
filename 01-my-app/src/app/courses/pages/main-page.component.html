@@ -1,8 +1,13 @@
 <div class="courses-main-page">
   <div class="left-panel">
-    <courses-list [coursesList]="courses"></courses-list>
+    <courses-list
+      [coursesList]="courseService.courses"
+      (onDelete)="courseService.onDeleteCourse($event)"
+    ></courses-list>
   </div>
   <div class="right-panel">
-    <courses-form (onNewCourse)="onNewCourse($event)"></courses-form>
+    <courses-form
+      (onNewCourse)="courseService.onNewCourse($event)"
+    ></courses-form>
   </div>
 </div>

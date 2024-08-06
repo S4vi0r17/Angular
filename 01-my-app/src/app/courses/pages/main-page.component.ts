@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Course } from '../interfaces/course.interface';
+import { CourseService } from '../services/course.service';
 
 @Component({
     selector: 'app-courses-main-page',
@@ -8,16 +9,7 @@ import { Course } from '../interfaces/course.interface';
 })
 
 export class MainPageComponent {
-    public courses: Course[] = [
-        { name: 'Design Patterns', grade: 90 },
-        { name: 'Software Architecture', grade: 85 },
-        { name: 'User Experience', grade: 80 },
-        { name: 'Web Development', grade: 75 },
-        { name: 'Mobile Development', grade: 70 }
-    ];
-
-    onNewCourse(course: Course): void {
-        console.log('New course', course);
-        this.courses.push(course);
-    }
+    constructor(
+        public courseService: CourseService
+    ) { }
 }
