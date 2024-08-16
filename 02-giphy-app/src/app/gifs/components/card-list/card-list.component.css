@@ -1,0 +1,43 @@
+.gif-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.gif-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.gif-card img {
+  transition: transform 0.3s ease;
+  border-radius: 12px 12px 0 0;
+}
+
+.gif-card:hover img {
+  transform: scale(1.05);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.card-body button {
+  align-self: center;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-body button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
