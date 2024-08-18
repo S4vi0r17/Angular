@@ -5,6 +5,7 @@
     <button
       *ngFor="let gif of history"
       class="list-group-item list-group-item-action text-light border-0 mb-2"
+      (click)="search(gif)"
     >
       {{ gif | titlecase }}
     </button>
