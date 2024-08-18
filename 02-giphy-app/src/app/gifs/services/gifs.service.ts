@@ -17,7 +17,9 @@ export class GifsService {
 
   constructor(
     private _http: HttpClient
-  ) { }
+  ) {
+    this.loadHistory();
+  }
 
   get history() {
     return [...this._history];
@@ -53,5 +55,24 @@ export class GifsService {
     this._history.unshift(tag);
 
     this._history = this._history.splice(0, 10);
+
+    this.saveHistory(); // Save history in local storage
+  }
+
+  private saveHistory() {
+    localStorage.setItem('history', JSON.stringify(this._history));
+  }
+
+  private loadHistory() {
+    const history = localStorage.getItem('history');
+
+    if (!history) return;
+
+    this._history = JSON.parse(history);
+
+    // Load the last search
+    if (this._history.length > 0) {
+      this.searchGifs(this._history[0]);
+    }
   }
 }
