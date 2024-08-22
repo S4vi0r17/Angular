@@ -1,1 +1,60 @@
-<p>country-page works!</p>
+<ng-template #loading>
+  <div class="loading-alert">
+    <h2>Loading...</h2>
+  </div>
+</ng-template>
+
+<div *ngIf="country; else loading" class="country-details-container">
+  <div class="country-header">
+    <img
+      [src]="country.flags.svg"
+      [alt]="country.name.common"
+      class="flag-image"
+    />
+    <h2>{{ country.name.common }}</h2>
+    <p class="region">{{ country.region }} - {{ country.subregion }}</p>
+  </div>
+
+  <div class="country-content">
+    <div class="country-info">
+      <ul>
+        <li><strong>Code:</strong> {{ country.cca2 }}</li>
+        <li><strong>Capital:</strong> {{ country.capital }}</li>
+        <li><strong>Area:</strong> {{ country.area | number }} km²</li>
+        <li><strong>Population:</strong> {{ country.population | number }}</li>
+      </ul>
+    </div>
+    <div class="translations">
+      <h3>Translations</h3>
+      <ul class="translations-list">
+        <li>
+          <strong>Spanish:</strong> {{ country.translations["spa"].common }}
+        </li>
+        <li>
+          <strong>French:</strong> {{ country.translations["fra"].common }}
+        </li>
+        <li>
+          <strong>German:</strong> {{ country.translations["deu"].common }}
+        </li>
+        <li>
+          <strong>Italian:</strong> {{ country.translations["ita"].common }}
+        </li>
+        <li>
+          <strong>Japanese:</strong> {{ country.translations["jpn"].common }}
+        </li>
+        <li>
+          <strong>Portuguese:</strong> {{ country.translations["por"].common }}
+        </li>
+        <li>
+          <strong>Russian:</strong> {{ country.translations["rus"].common }}
+        </li>
+        <li>
+          <strong>Arabic:</strong> {{ country.translations["ara"].common }}
+        </li>
+        <li>
+          <strong>Chinese:</strong> {{ country.translations["zho"].common }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
