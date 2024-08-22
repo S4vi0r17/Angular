@@ -1,9 +1,9 @@
-<h2>Paises</h2>
+<aside>
+  <h2 class="title">Paises</h2>
+  <hr class="divider" />
 
-<hr />
-
-<ul class="list-group">
-  <!-- <li
+  <ul class="menu">
+    <!-- <li
     routerLink=""
     routerLinkActive="active"
     [routerLinkActiveOptions]="{ exact: true }"
@@ -25,25 +25,27 @@
   >
     Contact Page
   </li> -->
-  <li
-    routerLink="countries/by-capital"
-    routerLinkActive="active"
-    class="list-group-item cursor-pointer"
-  >
-    Countries by Capital
-  </li>
-  <li
-    routerLink="countries/by-country"
-    routerLinkActive="active"
-    class="list-group-item cursor-pointer"
-  >
-    Countries by Country
-  </li>
-  <li
-    routerLink="countries/by-region"
-    routerLinkActive="active"
-    class="list-group-item cursor-pointer"
-  >
-    Countries by Region
-  </li>
-</ul>
+    <li
+      routerLink="countries/by-capital"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="menu-item"
+    >
+      Countries by Capital
+    </li>
+    <li
+      routerLink="countries/by-country"
+      routerLinkActive="active"
+      class="menu-item"
+    >
+      Countries by Country
+    </li>
+    <li
+      routerLink="countries/by-region"
+      routerLinkActive="active"
+      class="menu-item"
+    >
+      Countries by Region
+    </li>
+  </ul>
+</aside>
