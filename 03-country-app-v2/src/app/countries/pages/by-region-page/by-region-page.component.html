@@ -1,0 +1,15 @@
+<section>
+  <h2 class="title">By Region</h2>
+  <hr class="divider" />
+
+  <div class="search-container">
+    <shared-search-box
+      placeholder="Search Region"
+      (search)="searchByRegion($event)"
+    ></shared-search-box>
+  </div>
+
+  <div class="table-container">
+    <countries-country-table [countries]="countries"></countries-country-table>
+  </div>
+</section>
