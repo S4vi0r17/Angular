@@ -3,9 +3,10 @@
   <hr class="divider" />
 
   <div class="search-container">
+    <!-- (search)="searchByCapital($event)" -->
     <shared-search-box
       placeholder="Search Capital"
-      (search)="searchByCapital($event)"
+      (onDebounce)="searchByCapital($event)"
     ></shared-search-box>
   </div>
 
