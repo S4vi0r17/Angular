@@ -4,10 +4,13 @@
 
   <!-- (search)="searchByRegion($event)" -->
   <div class="search-container">
-    <shared-search-box
-      placeholder="Search Region"
-      (onDebounce)="searchByRegion($event)"
-    ></shared-search-box>
+    <button
+      *ngFor="let region of regions"
+      (click)="searchByRegion(region)"
+      [ngClass]="{'active': region === selectedRegion}"
+    >
+      {{ region }}
+    </button>
   </div>
 
   <div class="table-container">
