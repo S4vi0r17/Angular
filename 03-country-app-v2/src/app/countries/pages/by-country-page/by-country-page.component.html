@@ -6,6 +6,7 @@
   <div class="search-container">
     <shared-search-box
       placeholder="Search Country"
+      [value]="initialInputValue"
       (onDebounce)="searchByCountry($event)"
     ></shared-search-box>
   </div>
