@@ -7,13 +7,17 @@
     <button
       *ngFor="let region of regions"
       (click)="searchByRegion(region)"
-      [ngClass]="{'active': region === selectedRegion}"
+      [ngClass]="{ active: region === selectedRegion }"
     >
       {{ region }}
     </button>
   </div>
 
   <div class="table-container">
-    <countries-country-table [countries]="countries"></countries-country-table>
+    <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+    <countries-country-table
+      [countries]="countries"
+      *ngIf="!isLoading"
+    ></countries-country-table>
   </div>
 </section>
