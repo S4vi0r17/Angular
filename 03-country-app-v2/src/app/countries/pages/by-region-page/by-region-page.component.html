@@ -2,10 +2,11 @@
   <h2 class="title">By Region</h2>
   <hr class="divider" />
 
+  <!-- (search)="searchByRegion($event)" -->
   <div class="search-container">
     <shared-search-box
       placeholder="Search Region"
-      (search)="searchByRegion($event)"
+      (onDebounce)="searchByRegion($event)"
     ></shared-search-box>
   </div>
 
