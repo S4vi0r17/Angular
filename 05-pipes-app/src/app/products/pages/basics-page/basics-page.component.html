@@ -1,1 +1,20 @@
-<p>basics-page works!</p>
+<p-panel [showHeader]="false">
+  <h1>Basics Pipes</h1>
+  <p>
+    Pipes included in Angular are great for transforming data in the template.
+    They are easy to use and can be chained to format data in a way that is easy
+    to read.
+  </p>
+</p-panel>
+
+<div class="p-grid">
+  <div class="p-col-4">
+    <p-card header="uppercase"> {{ nameLower | uppercase }} </p-card>
+  </div>
+  <div class="p-col-4">
+    <p-card header="lowercase"> {{ nameUpper | lowercase }} </p-card>
+  </div>
+  <div class="p-col-4">
+    <p-card header="titlecase"> {{ nameFull | titlecase }} </p-card>
+  </div>
+</div>
