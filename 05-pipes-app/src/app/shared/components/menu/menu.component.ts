@@ -13,28 +13,34 @@ export class MenuComponent {
   ngOnInit() {
     this.items = [
       {
-        label: 'Documents',
+        label: 'Pipes of Angular',
+        icon: 'pi pi-desktop',
         items: [
           {
-            label: 'New',
-            icon: 'pi pi-plus'
+            label: 'Text and Dates',
+            icon: 'pi pi-align-left',
           },
           {
-            label: 'Search',
-            icon: 'pi pi-search'
+            label: 'Numbers',
+            icon: 'pi pi-dollar',
+          },
+          {
+            label: 'No common pipes',
+            icon: 'pi pi-times',
           }
         ]
       },
       {
-        label: 'Profile',
+        label: 'Personalized Pipes',
+        icon: 'pi pi-cog',
         items: [
           {
-            label: 'Settings',
-            icon: 'pi pi-cog'
+            label: 'Upper and Lower Case',
+            icon: 'pi pi-sort-alpha-up',
           },
           {
-            label: 'Logout',
-            icon: 'pi pi-sign-out'
+            label: 'Currency',
+            icon: 'pi pi-money-bill',
           }
         ]
       }
