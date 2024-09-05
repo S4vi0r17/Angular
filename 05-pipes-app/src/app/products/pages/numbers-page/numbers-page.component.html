@@ -1,1 +1,25 @@
-<p>numbers-page works!</p>
+<p-panel header="Numeric Pipes" class="p-1">
+  <p class="m-0">
+    Pipes included in Angular are great for transforming data in the template.
+    They are easy to use and can be chained to format data in a way that is easy
+    to read.
+  </p>
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-4">
+    <p-card header="Net Sales" subheader="for the current year">
+      {{ totalSells + 4213 | number : "1.2-2" }}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="Gross Sales" subheader="for the current year">
+      {{ totalSells | currency : "PEN" : "symbol-narrow" : "1.4-4" }}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="Profit Percentage" subheader="for the current year">
+      {{ percentage | percent : "1.2-2" }}
+    </p-card>
+  </div>
+</div>
